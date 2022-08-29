@@ -97,6 +97,15 @@
   margin-right: 20px;
 }
 
+.App .todo-list li div {
+  position: relative;
+}
+
+.App .todo-list li div button {
+  position: absolute;
+  right: 0;
+}
+
 .App .todo-list li p {
   margin-left: 34px;
 }

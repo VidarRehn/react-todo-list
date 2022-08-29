@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 
-export default function Todo( {todo} ) {
+export default function Todo( {todo, removeTodo} ) {
 
     let [completed, setCompleted] = useState(todo.completed)
 
@@ -10,6 +10,7 @@ export default function Todo( {todo} ) {
             <div>
                 <input type="checkbox" checked={completed} onChange={() => setCompleted(!completed)} />
                 <strong className={completed ? 'completed' : null}>{todo.title}</strong>
+                <button onClick={(e)=> removeTodo(e)}>Remove</button>
             </div>
             {!completed && (
                 <p>{todo.description}</p>

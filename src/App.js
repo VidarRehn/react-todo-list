@@ -62,6 +62,10 @@ function App() {
     document.querySelector('.add-todo-form').reset()
 }
 
+  const removeTodo = (e) => {
+    e.target.parentElement.parentElement.remove()
+  }
+
   return (
     <div className={darkMode ? 'App dark-mode' : 'App'}>
       <header>
@@ -69,7 +73,7 @@ function App() {
         <button onClick={()=>{setDarkMode(!darkMode)}}>{darkMode ? 'Light mode' : 'Dark mode'}</button>
       </header>
       <AddTodoForm todos = {todos} addTodo = {addTodo}/>
-      <Todolist todos = {todos} />
+      <Todolist todos = {todos} removeTodo = {removeTodo} />
 
     </div>
   );
