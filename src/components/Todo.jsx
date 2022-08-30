@@ -6,7 +6,7 @@ export default function Todo( {todo, removeTodo} ) {
     let [completed, setCompleted] = useState(todo.completed)
 
     return (
-        <li>
+        <li  onDoubleClick={() => setCompleted(!completed)}>
             <div>
                 <input type="checkbox" checked={completed} onChange={() => setCompleted(!completed)} />
                 <strong className={completed ? 'completed' : null}>{todo.title}</strong>
