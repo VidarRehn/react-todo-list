@@ -70,7 +70,7 @@ function App() {
     <div className={darkMode ? 'App dark-mode' : 'App'}>
       <header>
         <h1>TO DO APP</h1>
-        <button onClick={()=>{setDarkMode(!darkMode)}}>{darkMode ? 'Light mode' : 'Dark mode'}</button>
+        <button onClick={()=>{setDarkMode(!darkMode)}}>{darkMode ? (<i class="fa-solid fa-sun"></i>) : <i class="fa-solid fa-moon"></i>}</button>
       </header>
       <AddTodoForm todos = {todos} addTodo = {addTodo}/>
       <Todolist todos = {todos} removeTodo = {removeTodo} />

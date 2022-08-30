@@ -10,7 +10,7 @@ export default function Todo( {todo, removeTodo} ) {
             <div>
                 <input type="checkbox" checked={completed} onChange={() => setCompleted(!completed)} />
                 <strong className={completed ? 'completed' : null}>{todo.title}</strong>
-                <button onClick={(e)=> removeTodo(e)}>Remove</button>
+                <button onClick={(e)=> removeTodo(e)}><i class="fa-solid fa-trash-can"></i></button>
             </div>
             {!completed && (
                 <p>{todo.description}</p>
