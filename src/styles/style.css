@@ -93,7 +93,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10px;
-  width: 300px;
+  width: 400px;
 }
 
 .App .todo-list li input[type="checkbox"] {
@@ -118,7 +118,7 @@
 }
 
 .completed {
-  color: green;
+  color: #00bc00;
   text-decoration: line-through;
 }
 
